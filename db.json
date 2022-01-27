@@ -1,0 +1,13 @@
+{
+  "patients": [
+    {
+      "name": "Guilherme Lage Albano",
+      "cpf": "153.999.266-79",
+      "date": "1999-12-26",
+      "gender": "Masculino",
+      "status": "Inativo",
+      "address": "Monlevade",
+      "id": 1
+    }
+  ]
+}
