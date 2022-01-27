@@ -23,6 +23,7 @@ export default function Footer( props ) {
                 <p className={ styles.copyright }>
                     <span>ACME</span> &copy; 2022
                 </p>
+
                 
             </footer>
         )

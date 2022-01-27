@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Frock';
+    src: local('../../../fonts/Frock-BlackItalic.otf');
+}
+
+.homeContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    
+}
+
+.homeContainer h1 {
+    font-size: 2.5em;
+    margin-bottom: .5em;
+    z-index: 1;
+    color: #073a48;
+}
+
+.homeContainer h1 span {
+    color: #289ebf;
+    padding: 0 .2em;
+    border-radius: 10px;
+    font-family: 'Frock';
+}
+
+.homeContainer p{
+    z-index: 1;
+    font-size: 16pt;
+    margin: 2em 26% 1.5em 6em;
+    color: #56696f;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.homeContainer small {
+    font-size: 14pt;
+}
+
+.homeContainer img {
+    width: 600px;
+    margin: 2em 0 0 12%;
+    position: absolute;
+   
+
+}
+
