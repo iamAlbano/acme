@@ -51,7 +51,8 @@ export default function TablePatients( ) {
                 ).then (
                     data => {
                         setPatients(patients.filter( ( patient ) => patient.id !== id))
-                        setRows((prevRows) => prevRows.filter((row) => row.id !== id));
+                        setRows((prevRows) => prevRows.filter((row) => row.id !== id))
+                        navigate('/pacientes', {state:  { message: 'Paciente excluído com sucesso!', type: "info" } } )
                     }
                 ).catch(err => console.log(err))
           });

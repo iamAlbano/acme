@@ -3,20 +3,51 @@ import Input from '../form/Input'
 import Select from '../form/Select'
 import Submit from '../form/Submit'
 import Grid from '@mui/material/Grid'
-
-import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 
 export default function PatientForm( { handleSubmit, patientData, type }) {
 
     const gender =  ["Feminino", "Masculino"] 
     const status = ["Ativo", "Inativo"]
+    const [patients, setPatients] = useState([])
 
     const [patient, setPatient] = useState( patientData || { } )
 
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        fetch('http://localhost:5000/patients', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }).then(resp => resp.json())
+          .then(data => {
+            setPatients( data )
+          }) 
+          .catch((err) => console.log(err)) 
+
+    }, [])
+  
+
     const submit = (e) => {
         e.preventDefault()
+
+      
+
+        for(var i in patients){
+            if(patients[i].cpf == e.target.cpf.value && patients[i].name != e.target.id.name){
+                navigate('/cadastro', {state:  { message: 'CPF já cadastrado!', type: 'danger' } } )
+                return
+            }     
+            
+        }
+
         handleSubmit( patient )
+        
+        
     }
 
     function handleChange(e) { 
