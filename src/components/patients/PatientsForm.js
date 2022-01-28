@@ -19,7 +19,8 @@ export default function PatientForm( { handleSubmit, patientData, type }) {
         handleSubmit( patient )
     }
 
-    function handleChange(e) {
+    function handleChange(e) { 
+
         setPatient( { ...patient, [ e.target.name ]: e.target.value })
     }
 
@@ -42,6 +43,7 @@ export default function PatientForm( { handleSubmit, patientData, type }) {
                         type="text"
                         name="cpf"      
                         label="CPF"
+                        mask="999.999.999-99"
                         required={ true }
                         value={ patient.cpf ? patient.cpf : ''} 
                         handleOnChange={ handleChange }
@@ -76,7 +78,7 @@ export default function PatientForm( { handleSubmit, patientData, type }) {
                         name="status"
                         label="Status"
                         required={ true }
-                        value={ patient.status ? patient.status : '' }
+                        value={ patient.status ? patient.status : 'Ativo' }
                         handleOnChange={ handleChange }
                         options={ status } />
                 </Grid>
