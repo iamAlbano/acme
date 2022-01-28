@@ -2,7 +2,6 @@ import styles from './Home.module.css'
 import point from '../../img/point.jpg'
 import Button from '../layout/Button'
 
-import logo from '../../img/acme_white.png'
 
 export default function Home() {
 

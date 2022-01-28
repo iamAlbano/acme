@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 export default function NewPatient() {
 
-    const history = useNavigate()
+    const navigate = useNavigate()
 
     function create( patient ) {
 
@@ -22,7 +22,7 @@ export default function NewPatient() {
          ).then (
              (data) => {
                  console.log(data)
-                 history('/pacientes', { msg: 'Paciente cadastrado com sucesso!' })
+                 navigate('/pacientes', {state:  { message: 'Paciente cadastrado com sucesso!' } } )
              }
          )
          .catch(err => console.log(err))
