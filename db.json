@@ -15,6 +15,13 @@
       "date": "1999-07-31",
       "address": "Vila tanque",
       "id": 2
+    },
+    {
+      "name": "João da Silva",
+      "cpf": "123.456.789-0",
+      "address": "Vila tanque",
+      "date": "2022-01-13",
+      "id": 3
     }
   ]
 }
