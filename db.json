@@ -2,19 +2,12 @@
   "patients": [
     {
       "name": "Guilherme Lage Albano",
-      "cpf": "153.999.266-79",
-      "date": "2022-01-11",
+      "cpf": "153.999.266-78",
       "gender": "Masculino",
-      "address": "Monlevade",
-      "id": 1
-    },
-    {
-      "name": "Maria Clara ",
-      "cpf": "123.456.789-0",
-      "date": "2022-01-18",
-      "status": "Inativo",
-      "address": "Vila tanque",
-      "id": 3
+      "date": "2022-01-12",
+      "address": "BH",
+      "id": 1,
+      "status": "Ativo"
     }
   ]
 }

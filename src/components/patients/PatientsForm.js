@@ -63,7 +63,7 @@ export default function PatientForm( { handleSubmit, patientData, type }) {
                     <Select 
                         name="gender"
                         label="Sexo"
-                        value={ patient.gender ? patient.gender : '' }
+                        value={ patient.gender ? patient.gender : 'Feminino' }
                         handleOnChange={ handleChange }
                         options={ gender } />
                 </Grid>

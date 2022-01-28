@@ -1,0 +1,49 @@
+.patientDetails {
+    padding: 1em;
+}
+
+.patientDetails h1
+.patientDetails h2,
+.patientDetails p
+{
+    margin-bottom: 0.5em;
+}
+
+.patientDetails h1 {
+    color: #073a48;
+}
+
+.patientDetails span {
+    font-weight: bold;
+}
+
+.detailsContainer {
+    margin: 0 auto;
+    padding: 1.2em;
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: #289ebf;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+    font-size: large;
+    z-index: 1;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #1e7891;
+    cursor: pointer;
+}
+
+.info {
+    width: 100%;
+    margin-top: 1em;
+}

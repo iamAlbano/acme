@@ -3,6 +3,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react'
 import { DataGrid, GridToolbar, GridActionsCellItem } from '@mui/x-data-grid';
 import { BsPencil as EditIcon, BsFillTrashFill as DeleteIcon } from 'react-icons/bs'
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -11,6 +12,8 @@ export default function TablePatients( ) {
 
     const [patients, setPatients] = useState([])
     const [rows, setRows] = useState([])
+
+    
 
     useEffect(() => {
         fetch('http://localhost:5000/patients', {
@@ -26,6 +29,13 @@ export default function TablePatients( ) {
           .catch((err) => console.log(err)) 
 
     }, [])
+
+    let navigate = useNavigate();
+    const updatePatient = React.useCallback(
+     (id) =>() => { 
+      navigate(`/paciente/${id}`);
+    }
+    );
 
     const deletePatient = React.useCallback(
         (id) => () => {
@@ -69,7 +79,8 @@ export default function TablePatients( ) {
 
             <GridActionsCellItem
                 icon={<EditIcon />}
-                label="Edit"    
+                label="Edit" 
+                onClick={ updatePatient( params.id ) }   
               />,
 
               <GridActionsCellItem
