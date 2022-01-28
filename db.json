@@ -8,7 +8,13 @@
       "status": "Inativo",
       "address": "Monlevade",
       "id": 1
-    } 
-    
+    },
+    {
+      "name": "Maria Clara ",
+      "cpf": "145.822.114-44",
+      "date": "1999-07-31",
+      "address": "Vila tanque",
+      "id": 2
+    }
   ]
 }

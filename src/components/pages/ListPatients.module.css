@@ -1,0 +1,15 @@
+.ListPatientContainer {
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.ListPatientContainer h1 {
+    margin-bottom: 0.5em;
+    color: #073a48;
+    text-align: center;
+}
+
+.ListPatientContainer p {
+    color: #56696f;
+}
