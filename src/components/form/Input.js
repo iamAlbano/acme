@@ -1,6 +1,6 @@
 import styles from './Input.module.css'
 
-export default function Input( { type, label, placeholder, name, handleOnChange, value } ) {
+export default function Input( { type, label, placeholder, name, handleOnChange, value, required } ) {
 
     return (
         <div className={ styles.formInput }>
@@ -12,7 +12,11 @@ export default function Input( { type, label, placeholder, name, handleOnChange,
                 id={name}
                 onChange={ handleOnChange }  
                 value={ value }
-                required
+                {
+                    ...required ==true && (
+                        required={ required }
+                    )
+                }
                 />
         </div>
     )

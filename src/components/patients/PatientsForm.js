@@ -30,6 +30,7 @@ export default function PatientForm( { handleSubmit, patientData, type }) {
                     <Input 
                         type="text"
                         name="name"
+                        required={ true }
                         value={ patient.name ? patient.name : '' } 
                         placeholder="Insira o nome do paciente"
                         handleOnChange={ handleChange }
@@ -41,6 +42,7 @@ export default function PatientForm( { handleSubmit, patientData, type }) {
                         type="text"
                         name="cpf"      
                         label="CPF"
+                        required={ true }
                         value={ patient.cpf ? patient.cpf : ''} 
                         handleOnChange={ handleChange }
                         placeholder="xxx.xxx.xxx-xx" />
@@ -51,6 +53,7 @@ export default function PatientForm( { handleSubmit, patientData, type }) {
             <Input 
                 type="date"
                 name="date"  
+                required={ true }
                 value={ patient.date ? patient.date : ''}    
                 handleOnChange={ handleChange }
                 label="Data de nascimento" />   
@@ -72,6 +75,7 @@ export default function PatientForm( { handleSubmit, patientData, type }) {
                     <Select 
                         name="status"
                         label="Status"
+                        required={ true }
                         value={ patient.status ? patient.status : '' }
                         handleOnChange={ handleChange }
                         options={ status } />
