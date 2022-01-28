@@ -1,0 +1,15 @@
+.NewPatientContainer {
+    width: 650px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.NewPatientContainer h1 {
+    margin-bottom: 0.5em;
+    color: #073a48;
+    text-align: center;
+}
+
+.NewPatientContainer p {
+    color: #56696f;
+}

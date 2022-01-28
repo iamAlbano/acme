@@ -1,0 +1,25 @@
+.message {
+    width: 22%;
+    padding: 1em;
+    margin: 0% 0% 5% 48%;
+    text-align: center;
+    margin-bottom: 2em;
+    box-shadow: 2px 2px #d1d1d1;
+    background-color: rgb(229, 246, 253);  
+    position: absolute;
+}
+
+.success {
+    color: #fff;
+    background-color: #2e7d32 !important;
+}
+
+.danger {
+    color: #fff;
+    background-color: #d32f2f !important;
+}
+
+.alert {
+    background-color: rgb(255, 244, 229) !important;
+}
+

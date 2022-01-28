@@ -1,0 +1,17 @@
+.formSelect {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.formSelect label {
+    margin-bottom: .6em;
+    font-weight: bold;
+    color: #56696f;
+}
+
+.formSelect select {
+    padding: .7em;
+    border-radius: 3px;
+    border: #56696f 1px solid;
+}
