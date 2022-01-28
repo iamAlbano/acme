@@ -14,7 +14,7 @@ export default function Home() {
             <img src={point} alt="medic woman pointing" title="Photo by Bermix Studio on Unsplash" />
             <p>Aqui você encontra a melhor solução para administrar os pacientes da clínica. Fácil e rápido, o sistema acme de gerenciamento
                 te oferece a mais moderna tecnologia web para gestão da clínica, sem mais cadastros no papel ou em sistemas obsoletos.  </p>
-            <Button to="/ListPatients" text="Lista de pacientes"></Button>
+            <Button to="/pacientes" text="Lista de pacientes"></Button>
 
 
         </section>
