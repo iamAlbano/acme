@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Quick start: npm start and npm run backend on your terminal to start the application.
+
 In the project directory, you can run:
 
 ### `npm start`
@@ -13,6 +15,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+### `npm run backend`
+
+Runs the app db.json file in the development mode.\
+Open [http://localhost:5000](http://localhost:3000) to view it in your browser.
+
+This command is necessary to create, update, read and delete patients on the app.
 
 ### `npm test`
 
