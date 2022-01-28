@@ -38,7 +38,7 @@ export default function PatientForm( { handleSubmit, patientData, type }) {
       
 
         for(var i in patients){
-            if(patients[i].cpf == e.target.cpf.value && patients[i].name != e.target.id.name){
+            if(patients[i].cpf == e.target.cpf.value && patients[i].name != e.target.name.value){
                 navigate('/cadastro', {state:  { message: 'CPF já cadastrado!', type: 'danger' } } )
                 return
             }     
@@ -109,7 +109,7 @@ export default function PatientForm( { handleSubmit, patientData, type }) {
                         name="status"
                         label="Status"
                         required={ true }
-                        value={ patient.status ? patient.status : 'Ativo' }
+                        value={ patient.status ? patient.status : 1 }
                         handleOnChange={ handleChange }
                         options={ status } />
                 </Grid>

@@ -4,13 +4,23 @@ import { useState, useEffect } from 'react'
 import Container from '../layout/Container'
 import { BsPencil as EditIcon } from 'react-icons/bs'
 import PatientForm from '../patients/PatientsForm'
+import { useNavigate } from 'react-router-dom'
+import Message from '../layout/Message'
+import { useLocation } from 'react-router-dom'
 
 export default function Project(){
 
     const{ id } = useParams()
-
+    const navigate = useNavigate()
     const [patient, setPatient] = useState([])
     const [showEditForm, setShowEditForm] = useState(false)
+    const location = useLocation()
+    let message = ''
+    let type = ''
+    if(location.state) {
+        message = location.state.message
+        type = location.state.type
+    }
 
     useEffect(() => {
         fetch(`http://localhost:5000/patients/${id}`, {
@@ -39,6 +49,7 @@ export default function Project(){
 
             setPatient( data )
             setShowEditForm(false)
+            navigate(`/paciente/${id}`, {state:  { message: 'Dados alterados com sucesso!', type: "success" } } )
         })
         .catch( err => console.log(err))
     }
@@ -53,9 +64,11 @@ export default function Project(){
 
     return (
         <div className={ styles.patientDetails }>
+            
             <Container customClass="column">
                 <div className={ styles.detailsContainer }>
                     <h1>{patient.name}</h1>
+               
                     <button onClick={toggleEditForm } className={ styles.btn }> 
                          { !showEditForm ? 'Editar' : 'Visualizar ficha' }
                     </button>
@@ -88,6 +101,9 @@ export default function Project(){
                         </div>
                     )
                     }
+                    { message && (
+                        <Message message={ message } type={ type } />
+                    )}
                 </div>
             </Container >
         </div>

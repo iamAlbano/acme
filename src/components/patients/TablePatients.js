@@ -67,9 +67,6 @@ export default function TablePatients( ) {
         { field: 'gender', headerName: 'Sexo', width: 130 },
         { field: 'status', headerName: 'Status', width: 120 },
 
-       
-
-
 
         {
             field: 'actions',
