@@ -9,9 +9,8 @@ import styles from './ListPatients.module.css'
 
 export default function ListPatients() {
 
- 
-    const [patients, setPatients] = useState([])
-    const [rows, setRows] =useState([])
+
+    
 
     const location = useLocation()
     let message = ''
@@ -20,30 +19,11 @@ export default function ListPatients() {
         message = location.state.message
     }
 
-
-    useEffect(() => {
-        fetch('http://localhost:5000/patients', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        }).then(resp => resp.json())
-          .then(data => {
-            setPatients(data)
-            setRows( data )
-          }) 
-          .catch((err) => console.log(err)) 
-
-
-    }, [])
-
-    
-
     return (
         <div className={ styles.ListPatientContainer }>
             <h1>Pacientes</h1>
 
-            <TablePatients rows={ rows }/>
+            <TablePatients />
 
             { message && (
                 <Message message={ message } type="success" />
