@@ -31,7 +31,8 @@
       "date": "1998-09-15",
       "status": "Inativo",
       "address": "Belo Horizonte",
-      "id": 7
+      "id": 7,
+      "gender": "Feminino"
     },
     {
       "name": "Silvia Silva",
@@ -39,7 +40,16 @@
       "date": "2006-06-28",
       "status": "Ativo",
       "address": "Porto Alegre",
-      "id": 8
+      "id": 8,
+      "gender": "Feminino"
+    },
+    {
+      "name": "Letícia",
+      "cpf": "000.000.000-00",
+      "date": "2006-05-11",
+      "gender": "Feminino",
+      "status": "Ativo",
+      "id": 9
     }
   ]
 }
